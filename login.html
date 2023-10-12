@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="_token" content="DlDyItmQdeKL8gtZlMwqYYXJta83xs0qHCO5fVjn">
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/events.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&amp;display=swap" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <title>Tech Vibes</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="app">
+            <div id="top">
+                <img id="logo" src="images/logo1.png" />
+                <div style="text-align: center"><span style="font-family: 'Arimo', serif; font-weight: 700">Tech Vibes™</span> helps you to share and exchange<br>your contact details with people.</div>
+            </div>
+
+            <div id="form">
+                <form method="POST" action="https://introcardbd.app/login" novalidate>
+                    <input type="hidden" name="_token" value="DlDyItmQdeKL8gtZlMwqYYXJta83xs0qHCO5fVjn">
+                    <div>
+                        <div class="input-box">
+                            <input id="email" type="email" name="email" placeholder="email address" value="" autocomplete="email" class="" autofocus required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input-box">
+                            <input id="password" type="password" name="password" placeholder="password" value="" autocomplete="current-password" class="" required>
+                            <img class="icon  password-visible-toggle " src="icons/visible.svg">
+                        </div>
+                    </div>
+                    <!-- <a id="forgot" class="button small" href="password/reset.html">FORGOT PASSWORD?</a> -->
+                    <div id="actions">
+                        <a class="button bordered highlight first" href="https://techvibesbd.com/">GET YOUR CARD</a>
+                        <button class="button bordered" type="submit">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

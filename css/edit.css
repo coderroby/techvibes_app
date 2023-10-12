@@ -1,0 +1,119 @@
+#app {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    grid-template-rows: 24px auto auto auto 48px;
+    grid-template-areas: ". . ." ". top ." ". form ." ". actions ." ". . .";
+}
+
+#top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+#top .title {
+    margin-bottom: 0;
+}
+
+#top .close {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    opacity: .6;
+    cursor: pointer;
+}
+
+#top .close:hover {
+    opacity: .8;
+}
+
+.card-preview {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#avatar-form {
+    display: grid;
+}
+
+#avatar-section-upload,
+#avatar-section-crop {
+    margin-bottom: 32px;
+}
+
+#avatar-img {
+    border-radius: 16px;
+}
+
+#avatar-change-button {
+    padding: 13px 20px;
+}
+
+#address-hint {
+    padding-right: 32px;
+    text-overflow: ellipsis;
+}
+
+#address-wrap {
+    display: none;
+}
+
+.themes {
+    display: grid;
+}
+
+.theme {
+    padding: 16px;
+    margin-bottom: 24px;
+    border: 1px solid white;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.theme:hover {
+    opacity: .8;
+}
+
+.theme.selected {
+    opacity: 1;
+}
+
+.theme .title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+#dark.theme {
+    background: black;
+    color: #E6E6E6;
+}
+
+#dark.theme .title {
+    color: #E6E6E6;
+}
+
+#light.theme {
+    background: #E6E6E6;
+    color: #262626;
+}
+
+#light.theme .title {
+    color: #262626;
+}
+
+#groovy.theme {
+    background-image: linear-gradient(to right, #0527B3, #6581F2);
+    color: #FFFFFF;
+}
+
+#groovy.theme .title {
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 395px) {
+    #app {
+        grid-template-columns: 32px 1fr 32px;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            overflow-y: auto;
+            max-height: 70%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .link {
+            cursor: pointer;
+        }
+
+        .link.unavailable {
+            color: gray;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="add-link-btn" class="button bordered highlight first">
+        ADD LINK
+    </a>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="link unavailable">Website</div>
+            <div class="link">Facebook</div>
+            <div class="link">LinkedIn</div>
+            <div class="link">Instagram</div>
+        </div>
+    </div>
+
+    <form id="add-link-form" class="hidden">
+        <label for="selected-link" id="selected-link-label">Selected Link:</label>
+        <input type="text" id="selected-link" name="selected-link">
+        <button type="submit">Add</button>
+    </form>
+
+    <script>
+        const addButton = document.getElementById('add-link-btn');
+        const popup = document.getElementById('popup');
+        const links = document.querySelectorAll('.link');
+        const form = document.getElementById('add-link-form');
+        const selectedLinkLabel = document.getElementById('selected-link-label');
+        const selectedLinkInput = document.getElementById('selected-link');
+
+        let selectedLink = '';
+
+        addButton.addEventListener('click', () => {
+            popup.style.display = 'block';
+        });
+
+        links.forEach((link) => {
+            link.addEventListener('click', () => {
+                if (!link.classList.contains('unavailable')) {
+                    selectedLink = link.textContent;
+                    selectedLinkLabel.textContent = `Selected Link: ${selectedLink}`;
+                    selectedLinkInput.value = selectedLink;
+                    link.classList.add('unavailable');
+                    popup.style.display = 'none';
+                    form.classList.remove('hidden');
+                }
+            });
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            // Handle form submission with the selected link
+            console.log(`Adding link: ${selectedLinkInput.value}`);
+            form.reset();
+            selectedLink = '';
+            selectedLinkLabel.textContent = 'Selected Link:';
+            links.forEach((link) => {
+                if (link.textContent === selectedLinkInput.value) {
+                    link.classList.add('unavailable');
+                } else {
+                    link.classList.remove('unavailable');
+                }
+            });
+            form.classList.add('hidden');
+        });
+
+    </script>
+
+</body>
+
+</html>

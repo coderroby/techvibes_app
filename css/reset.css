@@ -1,0 +1,25 @@
+#app {
+    display:                            grid;
+    grid-template-columns:              48px 1fr 48px;
+    grid-template-rows:                 84px auto auto 1fr 48px;
+    grid-template-areas:                ". . ."
+                                        ". top ."
+                                        ". content ."
+                                        ". . ."
+                                        ". . .";
+}
+
+#top {
+    margin-bottom:                      48px;
+}
+
+
+
+@media only screen and (max-width: 395px) {
+
+    #app {
+        grid-template-columns:          32px 1fr 32px;
+    }
+
+}
+

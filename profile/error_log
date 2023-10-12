@@ -1,0 +1,55 @@
+[16-May-2023 19:49:00 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[16-May-2023 19:49:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[16-May-2023 19:49:15 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[16-May-2023 19:49:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[16-May-2023 19:49:18 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[16-May-2023 19:49:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:13:43 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:13:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:13:49 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:13:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:14:02 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:14:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:14:47 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 05:14:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 07:26:02 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 07:26:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 07:26:04 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 07:26:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 17:27:44 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 17:27:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 17:28:01 UTC] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10
+[19-May-2023 17:28:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/techbprc/user.techvibesbd.com/profile/download.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/techbprc/user.techvibesbd.com/profile/download.php on line 10

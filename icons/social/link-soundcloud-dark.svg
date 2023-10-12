@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="link-soundcloud-dark" transform="translate(-3878 524)">
+    <rect id="Rectangle_119" data-name="Rectangle 119" width="64" height="64" transform="translate(3878 -524)" fill="none"/>
+    <g id="_081-soundcloud" data-name="081-soundcloud" transform="translate(3898 -503.75)">
+      <path id="Path_132" data-name="Path 132" d="M20.25,11a3.814,3.814,0,0,0-.782.082A6.762,6.762,0,0,0,12.75,5a.75.75,0,0,0-.75.75v12a.75.75,0,0,0,.75.75h7.5a3.75,3.75,0,0,0,0-7.5Z" fill="#e6e6e6"/>
+      <path id="Path_133" data-name="Path 133" d="M9,7.25v10.5a.75.75,0,0,0,1.5,0V7.25a.75.75,0,0,0-1.5,0Z" fill="#e6e6e6"/>
+      <path id="Path_134" data-name="Path 134" d="M6,10.25v7.5a.75.75,0,0,0,1.5,0v-7.5a.75.75,0,0,0-1.5,0Z" fill="#e6e6e6"/>
+      <path id="Path_135" data-name="Path 135" d="M3,17.75a.75.75,0,0,0,1.5,0v-7.5a.75.75,0,0,0-1.5,0Z" fill="#e6e6e6"/>
+      <path id="Path_136" data-name="Path 136" d="M.75,18.5a.75.75,0,0,0,.75-.75v-4.5a.75.75,0,0,0-1.5,0v4.5A.75.75,0,0,0,.75,18.5Z" fill="#e6e6e6"/>
+    </g>
+  </g>
+</svg>

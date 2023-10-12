@@ -1,0 +1,64 @@
+#app {
+    display:                            grid;
+    grid-template-columns:              40px 1fr 40px;
+    grid-template-rows:                 24px auto auto 1fr;
+    grid-template-areas:                ". . ."
+                                        ". top ."
+                                        ". content ."
+                                        ". . .";
+}
+
+#top {
+    height:                             34px;
+    display:                            flex;
+    align-items:                        center;
+    margin-bottom:                      52px;
+}
+
+#top #logo {
+    height:                             200px;
+    margin-right:                       auto;
+}
+
+#top .close {
+    width:                              24px;
+    height:                             24px;
+    margin-left:                        auto;
+    opacity:                            .6;
+    cursor:                             pointer;
+}
+
+#top .close:hover {
+    opacity:                            .8;
+}
+
+#content {
+    display:                            grid;
+}
+
+.button.menu {
+    padding:                            20px 0;
+    color:                              #A6A6A6;
+}
+
+.button.menu:hover {
+    color:                              #E6E6E6;
+}
+
+.button.menu.last {
+    margin-bottom:                      52px;
+}
+
+.button.bordered {
+    width:                              fit-content;
+}
+
+
+
+@media only screen and (max-width: 395px) {
+
+    #app {
+        grid-template-columns:              32px 1fr 32px;
+    }
+
+}

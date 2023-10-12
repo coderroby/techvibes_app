@@ -1,0 +1,26 @@
+#app {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 1fr auto 1fr auto 48px;
+    grid-template-areas: ". . ." ". top ." ". . ." ". form ." ". . .";
+}
+
+#logo {
+    width: 100%;
+    height: auto;
+    margin: 32px auto 56px;
+}
+
+#forgot {
+    float: right
+}
+
+#actions {
+    margin-top: 104px;
+}
+
+@media only screen and (max-width: 395px) {
+    #app {
+        grid-template-columns: 32px 1fr 32px;
+    }
+}

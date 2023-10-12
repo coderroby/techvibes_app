@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <style>
+      /* CSS styles for the popup */
+      .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: white;
+        border: 1px solid black;
+      }
+
+      /* CSS styles for the selected links */
+      .selected-links {
+        margin-top: 10px;
+      }
+
+      .selected-links div {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .selected-links div button {
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="add-link" class="button bordered highlight first">ADD LINK</a>
+    <div id="popup" class="popup" style="display: none">
+      <div class="link unavailable">Website</div>
+      <div class="link">Facebook</div>
+      <div class="link">LinkedIn</div>
+    </div>
+    <div id="selected-links" class="selected-links"></div>
+    <button id="save-links">Save links</button>
+
+    <script>
+      const popup = document.getElementById("popup");
+      const addLinkButton = document.getElementById("add-link");
+      const selectedLinks = document.getElementById("selected-links");
+      const saveLinksButton = document.getElementById("save-links");
+
+      let links = [];
+
+      // Function to show the popup
+      function showPopup() {
+        popup.style.display = "block";
+      }
+
+      // Function to hide the popup
+      function hidePopup() {
+        popup.style.display = "none";
+      }
+
+      // Function to add a link to the list of selected links
+      function addSelectedLink(link) {
+        // Check if the link has already been selected
+        if (!links.includes(link)) {
+          links.push(link);
+          const linkDiv = document.createElement("div");
+          linkDiv.textContent = link;
+          const input = document.createElement("input");
+          input.type = "text";
+          input.name = link;
+          const removeButton = document.createElement("button");
+          removeButton.textContent = "Remove";
+          removeButton.addEventListener("click", () => {
+            removeSelectedLink(link);
+          });
+          linkDiv.appendChild(input);
+          linkDiv.appendChild(removeButton);
+          selectedLinks.appendChild(linkDiv);
+        }
+      }
+
+      // Function to remove a link from the list of selected links
+      function removeSelectedLink(link) {
+        links = links.filter((l) => l !== link);
+        selectedLinks.innerHTML = "";
+        links.forEach((l) => addSelectedLink(l));
+      }
+
+      // Add event listener to the "Add Link" button to show the popup
+      addLinkButton.addEventListener("click", showPopup);
+
+      // Add event listeners to the links in the popup to add them to the list of selected links
+      const popupLinks = popup.querySelectorAll(".link");
+      popupLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          link.classList.add("unavailable");
+          addSelectedLink(link.textContent);
+          hidePopup();
+        });
+      });
+
+      // Add event listener to the "Save links" button to save the links to the database
+      saveLinksButton.addEventListener("click", () => {
+        console.log(links); // Replace this with code to save the links to the database
+      });
+    </script>
+  </body>
+</html>

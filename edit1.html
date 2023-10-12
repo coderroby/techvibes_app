@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="_token" content="0VfOKX010PC2fdlLu10P7zViGPZxyTRvtnsgz7Kw">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/events.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js" integrity="sha256-CgvH7sz3tHhkiVKh05kSUgG97YtzYNnWt6OXcmYzqHY=" crossorigin="anonymous"></script>
+    <script src="js/crop.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css" integrity="sha256-jKV9n9bkk/CTP8zbtEtnKaKf+ehRovOYeKoyfthwbC8=" crossorigin="anonymous" />
+    <link href="css/link.css" rel="stylesheet">
+    <link href="css/avatar.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
+    <title>Tech Vibes</title>
+</head>
+
+
+
+<body>
+    <div id="wrap">
+        <div id="app">
+            <div id="top">
+                <div class="title">Edit your profile</div>
+                <img class="close" src="icons/close.svg" onclick="window.location.href='https://introcardbd.app/profile'" />
+            </div>
+
+            <div id="form">
+                <div id="avatar-section-upload">
+                    <div class="card-preview">
+                        <div id="avatar-wrap">
+                            <form method="POST" id="avatar-form" action="https://introcardbd.app/avatar/submit" novalidate enctype="multipart/form-data">
+                                <input type="hidden" name="_token" value="0VfOKX010PC2fdlLu10P7zViGPZxyTRvtnsgz7Kw">
+                                <input id="avatar-upload" type="file" name="image" accept="image/*" />
+
+                                <div id="avatar-upload-button-wrap">
+                                    <label id="avatar-upload-image" for="avatar-upload"></label>
+                                    <label id="avatar-upload-button" for="avatar-upload" class="button transparent">UPLOAD</label>
+                                </div>
+                            </form>
+
+                            <img id="avatar-img" class="" src="storage/avatar/avatar_3453_1678610180.png" />
+
+                        </div>
+
+                    </div>
+
+                    <div id="avatar-change-button" class="button bordered highlight" onclick="$('#avatar-upload-button').click()">CHANGE PICTURE</div>
+                </div>
+
+                <div id="avatar-section-crop" style="display: none;">
+                    <div class="img-container">
+                        <img src="" id="sample_image" />
+                    </div>
+
+                    <button type="button" id="avatar-crop-button" class="button bordered highlight">CROP & SAVE IMAGE</button>
+
+                </div>
+
+
+
+                <form method="POST" action="https://introcardbd.app/profile/submit" novalidate>
+
+                    <input type="hidden" name="_token" value="0VfOKX010PC2fdlLu10P7zViGPZxyTRvtnsgz7Kw">
+                    <div class="subtitle">Personal</div>
+
+                    <div style="display: grid;grid-auto-flow: column">
+
+                        <div>
+                            <div class="input-top">
+                                <div class="input-tag">First name</div>
+                            </div>
+
+                            <div style="width:120px;margin-right:16px" class="input-box   tagged   ">
+                                <input id="first_name" type="text" name="first_name" placeholder="" value="Monowar" autocomplete="off" class="" maxlength="100" autofocus required>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div class="input-top">
+                                <div class="input-tag">Last name</div>
+                            </div>
+
+                            <div class="input-box   tagged   ">
+                                <input id="last_name" type="text" name="last_name" placeholder="" value="H. Shuvo" autocomplete="off" class="" maxlength="100" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Designation</div>
+                        </div>
+
+                        <div class="input-box   tagged   ">
+                            <input id="title" type="text" name="title" placeholder="" value="Partner" autocomplete="off" class="" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Company</div>
+                        </div>
+
+                        <div class="input-box   tagged   ">
+                            <input id="company" type="text" name="company" placeholder="" value="TechVibes" autocomplete="off" class="" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div id="address">
+                        <div id="address-closed">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Address</div>
+                                </div>
+
+                                <div class="input-box   tagged    disabled ">
+                                    <input id="address-hint" type="text" name="address-hint" placeholder="Road : 3, House : 29, Sector : 10,  Uttara 01705167687, 1212 Dhaka, Bangladesh" value="" autocomplete="off" class="" required disabled>
+                                    <img class="icon " src="icons/down.svg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="address-wrap">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Address</div>
+                                </div>
+
+                                <div class="input-box   tagged   stuck  ">
+                                    <input id="number" type="text" name="number" placeholder="Number" value="01705167687" autocomplete="off" class="" maxlength="100" required>
+                                    <img class="icon  address-expand-close " src="icons/up.svg">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="input-box    stuck  ">
+                                    <input id="street" type="text" name="street" placeholder="Street" value="Road : 3, House : 29, Sector : 10,  Uttara" autocomplete="off" class="" maxlength="100" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="input-box    stuck  ">
+                                    <input id="city" type="text" name="city" placeholder="City" value="Dhaka" autocomplete="off" class="" maxlength="100" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="input-box    stuck  ">
+                                    <input id="postcode" type="text" name="postcode" placeholder="Postcode" value="1212" autocomplete="off" class="" maxlength="100" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div style="margin-bottom:32px" class="input-box    stuck  ">
+                                    <input id="country" type="text" name="country" placeholder="Country" value="Bangladesh" autocomplete="off" class="" maxlength="100" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Biography</div>
+                            <div class="input-counter">0/250</div>
+                        </div>
+
+                        <div class="input-box multiline   tagged  ">
+                            <textarea id="biography" name="biography" placeholder="" autocomplete="off" class=" counter " maxlength="250" required>I am me, There is no one else like me in the whole world.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="separator-32"></div>
+                    <div class="subtitle">Login information</div>
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Email address</div>
+                        </div>
+
+                        <div class="input-box   tagged   ">
+                            <input id="email" type="email" name="email" placeholder="" value="mhshuvo.tech@gmail.com" autocomplete="off" class="" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div class="separator-32"></div>
+                    <div class="subtitle">Contact</div>
+
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Telephone personal</div>
+                            <div class="input-note">i.e. +8801234567890</div>
+                        </div>
+
+                        <div class="input-box   tagged   ">
+                            <input id="telephone" type="text" name="telephone" placeholder="With country code" value="+8801970167687" autocomplete="off" class="" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="input-top">
+                            <div class="input-tag">Telephone work</div>
+                            <div class="input-note">i.e. +8801234567890</div>
+                        </div>
+
+                        <div class="input-box   tagged   ">
+                            <input id="telephone_work" type="text" name="telephone_work" placeholder="With country code" value="+8801705167687" autocomplete="off" class="" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div id="links">
+                        <div class="link" id="link_1_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Website</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_1_value" type="text" name="link_1_value" placeholder="Paste entire URL" value="https://techvibesbd.com/" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+
+                            </div>
+
+                            <input type="hidden" id="link_1" name="link_1" value=1>
+                            <input type="hidden" id="link_1_position" name="link_1_position" value=1>
+                            <input type="hidden" id="link_1_visible" name="link_1_visible" value=1>
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(1);">
+                                <img src="icons/down.svg" onclick="link_down(1);">
+                                <img src="icons/visible.svg" onclick="link_visible(1);">
+                                <img src="icons/delete.svg" onclick="link_delete(1);">
+                            </div>
+                        </div>
+
+                        <div class="link" id="link_2_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Facebook Page</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_2_value" type="text" name="link_2_value" placeholder="Paste entire page URL" value="https://www.facebook.com/techvibesbd" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="link_2" name="link_2" value=3 34>
+                            <input type="hidden" id="link_2_position" name="link_2_position" value=2>
+                            <input type="hidden" id="link_2_visible" name="link_2_visible" value=1>
+
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(2);">
+                                <img src="icons/down.svg" onclick="link_down(2);">
+                                <img src="icons/visible.svg" onclick="link_visible(2);">
+                                <img src="icons/delete.svg" onclick="link_delete(2);">
+                            </div>
+                        </div>
+
+                        <div class="link" id="link_3_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Facebook</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_3_value" type="text" name="link_3_value" placeholder="Paste entire profile URL" value="https://www.facebook.com/shuvo.monowar71?mibextid=ZbWKwL" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="link_3" name="link_3" value=2>
+                            <input type="hidden" id="link_3_position" name="link_3_position" value=3>
+                            <input type="hidden" id="link_3_visible" name="link_3_visible" value=1>
+
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(3);">
+                                <img src="icons/down.svg" onclick="link_down(3);">
+                                <img src="icons/visible.svg" onclick="link_visible(3);">
+                                <img src="icons/delete.svg" onclick="link_delete(3);">
+                            </div>
+                        </div>
+
+
+                        <div class="link" id="link_4_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Instagram</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_4_value" type="text" name="link_4_value" placeholder="Paste username here" value="monowar.shuvo" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="link_4" name="link_4" value=3>
+                            <input type="hidden" id="link_4_position" name="link_4_position" value=4>
+                            <input type="hidden" id="link_4_visible" name="link_4_visible" value=1>
+
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(4);">
+                                <img src="icons/down.svg" onclick="link_down(4);">
+                                <img src="icons/visible.svg" onclick="link_visible(4);">
+                                <img src="icons/delete.svg" onclick="link_delete(4);">
+                            </div>
+                        </div>
+
+                        <div class="link" id="link_5_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">LinkedIn</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_5_value" type="text" name="link_5_value" placeholder="Paste entire profile URL" value="https://www.linkedin.com/in/monowarshuvo/" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="link_5" name="link_5" value=4>
+                            <input type="hidden" id="link_5_position" name="link_5_position" value=5>
+                            <input type="hidden" id="link_5_visible" name="link_5_visible" value=1>
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(5);">
+                                <img src="icons/down.svg" onclick="link_down(5);">
+                                <img src="icons/visible.svg" onclick="link_visible(5);">
+                                <img src="icons/delete.svg" onclick="link_delete(5);">
+                            </div>
+                        </div>
+
+                        <div class="link" id="link_6_container">
+                            <div>
+                                <div class="input-top">
+                                    <div class="input-tag">Youtube</div>
+                                </div>
+
+                                <div style="margin-bottom:0" class="input-box   tagged   ">
+                                    <input id="link_6_value" type="text" name="link_6_value" placeholder="Paste entire profile URL" value="https://youtube.com/@monowarshuvo9131" autocomplete="off" class="" maxlength="255" required>
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="link_6" name="link_6" value=6>
+                            <input type="hidden" id="link_6_position" name="link_6_position" value=6>
+                            <input type="hidden" id="link_6_visible" name="link_6_visible" value=1>
+
+                            <div class="actions">
+                                <img class="first" src="icons/up.svg" onclick="link_up(6);">
+                                <img src="icons/down.svg" onclick="link_down(6);">
+                                <img src="icons/visible.svg" onclick="link_visible(6);">
+                                <img src="icons/delete.svg" onclick="link_delete(6);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="separator-32"></div>
+                    <div id="actions">
+                        <a class="button bordered highlight first" onclick="link_add_open()">
+                            ADD LINK
+                        </a>
+                    </div>
+
+                    <div class="separator-48"></div>
+
+                    <div class="title-wrap">
+
+                        <div class="title">Color scheme</div>
+
+                        <div class="note">Tap to change</div>
+
+                    </div>
+
+                    <div class="themes">
+
+                        <div class="theme no-select " id="dark">
+                            <div>Dark theme</div>
+                            <div class="title">Monowar H. Shuvo</div>
+                        </div>
+
+                        <div class="theme no-select  selected " id="blue">
+                            <div>Blue theme</div>
+                            <div class="title">Monowar H. Shuvo</div>
+                        </div>
+
+                        <input type="hidden" id="theme" name="theme" value="groovy">
+                    </div>
+
+
+
+                    <div class="separator-48"></div>
+
+                    <div id="actions">
+                        <button class="button bordered highlight first" type="submit">
+                            SAVE
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <div id="modal-link" class="modal">
+                <div class="modal-content">
+
+                    <div class="top">
+                        <div class="title">Choose new link</div>
+                        <img src="icons/close.svg" onclick="link_add_close();">
+                    </div>
+
+                    <div id="1" class="link  unavailable " onclick="link_add_pick(1);">Website</div>
+                    <div id="2" class="link  unavailable " onclick="link_add_pick(2);">Facebook</div>
+                    <div id="3" class="link  unavailable " onclick="link_add_pick(3);">Instagram</div>
+                    <div id="4" class="link  unavailable " onclick="link_add_pick(4);">LinkedIn</div>
+                    <div id="5" class="link " onclick="link_add_pick(5);">Twitter</div>
+                    <div id="6" class="link  unavailable " onclick="link_add_pick(6);">Youtube</div>
+                    <div id="7" class="link " onclick="link_add_pick(7);">Snapchat</div>
+                    <div id="8" class="link " onclick="link_add_pick(8);">Pinterest</div>
+                    <div id="9" class="link " onclick="link_add_pick(9);">Teams</div>
+                    <div id="10" class="link " onclick="link_add_pick(10);">Quora</div>
+                    <div id="334" class="link  unavailable " onclick="link_add_pick(334);">Facebook Page</div>
+                    <div id="335" class="link " onclick="link_add_pick(335);">Tiktok</div>
+                    <div id="336" class="link " onclick="link_add_pick(336);">Twitch</div>
+                    <div id="337" class="link " onclick="link_add_pick(337);">Soundcloud</div>
+                    <div id="338" class="link " onclick="link_add_pick(338);">Vimeo</div>
+                    <div id="339" class="link " onclick="link_add_pick(339);">Spotify</div>
+                    <div id="340" class="link " onclick="link_add_pick(340);">Discord</div>
+                    <div id="341" class="link " onclick="link_add_pick(341);">Behance</div>
+                    <div id="342" class="link " onclick="link_add_pick(342);">Upwork</div>
+                    <div id="343" class="link " onclick="link_add_pick(343);">Dribbble</div>
+                    <div id="344" class="link " onclick="link_add_pick(344);">Fiverr</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

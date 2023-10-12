@@ -1,0 +1,15 @@
+lsapi_phpini /home/techbprc/techbprc/php.ini
+RewriteEngine On
+
+# Rewrite requests for /profile/username to profile.php?username=username
+RewriteRule ^profile/([a-zA-Z0-9_.-]+)$ profile.php?username=$1 [L]
+# RewriteRule ^profile/([a-zA-Z0-9_.-]+)$ profile.php?username=$1 [QSA,L]
+
+# Rewrite requests for /connect/username to connect.php?username=username
+RewriteRule ^connect/([a-zA-Z0-9_.-]+)$ connect.php?username=$1 [L]
+# Rewrite requests for /connect_list/username to connect_list.php?username=username
+RewriteRule ^connect_list/([a-zA-Z0-9_.-]+)$ connect_list.php?username=$1 [L]
+# Rewrite requests for /updateinfo/username to updateinfo.php?username=username
+RewriteRule ^updateinfo/([a-zA-Z0-9_.-]+)$ updateinfo.php?username=$1 [L]
+# Rewrite requests for /download/username to download.php?username=username
+RewriteRule ^download/([a-zA-Z0-9_.-]+)$ download.php?username=$1 [L]
