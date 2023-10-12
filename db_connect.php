@@ -1,9 +1,9 @@
 <?php
 // Connect to the database
 $servername = "localhost";
-$dbusername = "techbprc_intro";
-$password = "g?NWzSvkfyuc";
-$dbname = "techbprc_introcard";
+$dbusername = "root";
+$password = "";
+$dbname = "techvibes";
 
 $conn = new mysqli($servername, $dbusername, $password, $dbname);
 

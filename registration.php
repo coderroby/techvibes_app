@@ -37,7 +37,7 @@ function sanitizeSentence_two($sentence) {
 
 
 // Connect to the database
-// require_once 'db_connect.php';
+require_once 'db_connect.php';
 
 //for cheking http or https
 // function normalizeUrl($url) {

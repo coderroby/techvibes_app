@@ -1,4 +1,4 @@
-lsapi_phpini /home/techbprc/techbprc/php.ini
+# lsapi_phpini /home/techbprc/techbprc/php.ini
 RewriteEngine On
 
 # Rewrite requests for /profile/username to profile.php?username=username
