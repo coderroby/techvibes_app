@@ -1,5 +1,5 @@
 <?php
-die('test');
+die('test1');
 header("Location: login.php");
 exit;
 ?>
